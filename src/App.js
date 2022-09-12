@@ -1,23 +1,51 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+
+const data = [
+  { 
+    Collagename: 'Universel collage of engineering',
+    Studentname: 'Anusuya',
+    Age:21 
+  },
+  { 
+    Collagename: 'Arunachala collage of engineering',
+    Studentname: 'Abinaya',
+    Age:22
+  },
+  {
+    Collagename: 'Rohini collage of engineering',
+    Studentname: 'Akshaya',
+    Age:22 
+  }
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <table class="table">
+        <thead>
+          <tr>
+          {/* <th scope="col">Sl.No</th> */}
+          <th scope="col">Collage Name</th>
+          <th scope="col">Student Name</th>
+          <th scope="col">Age</th>
+          </tr>
+        </thead>
+        </table>
+
+        <div className="enter-btn">
+          <button type="button" class="btn btn-primary">Enter details</button>
+        </div> 
+
+        <div  className="input-box">
+          <lable>Enter Collage Name :</lable>
+          <input type="text" placeholder="enter collage name"/><br/>
+          <lable>Enter Student Name :</lable>
+          <input type="text" placeholder="enter student name"/><br/>
+          <lable>Age :</lable>
+          <input type="text" placeholder="age"/><br/>
+        </div> 
     </div>
   );
 }
